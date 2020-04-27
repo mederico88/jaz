@@ -1,0 +1,106 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+ 
+:focus{
+	outline: none;
+}
+body {
+	font-family: arial;
+	font-size: 16px;
+}
+
+#pantalla_inicial{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../../formulario/Gmail/imagen/hermoso.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#pantalla_inicial::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.wrap {
+	margin: auto;
+	max-width: 800px;
+	width: 90%;
+}
+ 
+.principal {
+	position: relative;
+	z-index: 1;
+	background: green;
+	border-top: 20px solid rgb(3, 99, 3);
+	color: #fff;
+	padding: 50px 0;
+	width: 100%;
+}
+
+.principal .formulario {
+	color: #212121;
+	text-align: center;
+}
+ 
+.principal .formulario input[type=text] {
+	margin-bottom: 20px;
+	padding: 10px;
+	width: 100%;
+}
+ 
+.principal .formulario input[type=text].error {
+	border: 5px solid #D32F2F;
+	color: rgba(255, 0, 0, 0.562);
+}
+ 
+.principal .formulario .boton {
+	background: blue;
+	border: 1px solid rgb(3, 107, 20);
+	color: #fff;
+	display: inline-block;
+    font-size: 16px;
+	padding: 15px;
+	border-radius: 20px;
+	box-shadow: 5px 5px 10px black;
+	width: 200px;
+}
+ 
+.principal .formulario .boton:hover {
+	border: 1px solid #fff;
+}
+ 
+/* - Tareas - */
+
+.tareas{
+	position: relative;
+	z-index: 1;
+}
+ 
+.tareas .lista li {
+	border-bottom: 1px solid #B6B6B6;
+	color: white;
+}
+ 
+.tareas .lista li a {
+	color: white;
+	display: block;
+	padding: 20px 0;
+	text-decoration: none;
+}
+ 
+.tareas .lista li a:hover {
+	text-decoration: line-through;
+}
+
+.tachado{
+	text-decoration: line-through;
+}
