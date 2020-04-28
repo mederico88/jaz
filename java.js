@@ -1,6 +1,7 @@
 (function(){
     //Creacion de variables a utilizar
-    
+    fecha= new Date();
+    alert(fecha);
     var lista = document.querySelector("#lista"),
         tareainput = document.getElementById('tareaInput'),
         btnNuevaTarea = document.querySelector("#btn-agregar");
@@ -30,7 +31,11 @@
         for (var i =0; i<=lista.children.length -1; i++){
             lista.children[i].addEventListener("click", function(){
               //  this.parentNode.removeChild(this);
-              this.className= "tachado";
+              if (this.className == "tachado") {
+                this.className= "";
+            }else{
+                this.className= "tachado";
+            }
             });
         }
     };
@@ -42,7 +47,11 @@
 
     var tachandoTareas = function(){
      //   this.parentNode.removeChild(this);
-        this.className= "tachado";
+        if (this.className == "tachado") {
+            this.className= "";
+        }else{
+            this.className= "tachado";
+        }
     };
 
     //Eventos
